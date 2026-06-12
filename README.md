@@ -6,8 +6,8 @@
 
 ## 2. Live Demo Links
 
-- Frontend: _add your deployed frontend URL here_
-- Backend API: _add your deployed backend URL here_
+- Frontend:http://localhost:5173
+- Backend API:http://localhost:5000
 
 ## 3. Tech Stack
 
