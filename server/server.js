@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -9,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = 'taskflow_secret_key_change_in_production';
+const JWT_SECRET =  process.env.JWT_SECRET;
 
 const usersFile = path.join(__dirname, 'data', 'users.json');
 const tasksFile = path.join(__dirname, 'data', 'tasks.json');
@@ -174,5 +176,11 @@ app.delete('/api/tasks/:id', authenticate, (req, res) => {
   res.json({ ok: true });
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`TaskFlow server running on http://localhost:${PORT}`));
+// const PORT = 5000;
+// app.listen(PORT, () => console.log(`TaskFlow server running on http://localhost:${PORT}`));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`TaskFlow server running on port ${PORT}`);
+});
