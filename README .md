@@ -6,8 +6,8 @@
 
 ## 2. Live Demo Links
 
-- Frontend: _add your deployed frontend URL here_
-- Backend API: _add your deployed backend URL here_
+- Frontend:(https://task-manager-wxvy.vercel.app/)
+- Backend API: (https://task-manager-ikyt.onrender.com)
 
 ## 3. Tech Stack
 
